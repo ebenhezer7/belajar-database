@@ -1,0 +1,122 @@
+Microsoft Windows [Version 10.0.22000.795]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\62812>color a
+
+C:\Users\62812>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>SHOW DATABASES
+'SHOW' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\mysql\bin>mysql -u root -p;
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 14
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW DATABASES;
++-------------------------+
+| Database                |
++-------------------------+
+| db_eben                 |
+| eben_hezer_wangsa_djaja |
+| information_schema      |
+| mysql                   |
+| performance_schema      |
+| phpmyadmin              |
+| sekolah                 |
+| test                    |
++-------------------------+
+8 rows in set (0.001 sec)
+
+MariaDB [(none)]> use db_eben
+Database changed
+MariaDB [db_eben]> desc tbl_eben
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'show tables' at line 2
+MariaDB [db_eben]> show tables;
++-------------------+
+| Tables_in_db_eben |
++-------------------+
+| tbl_eben          |
++-------------------+
+1 row in set (0.001 sec)
+
+MariaDB [db_eben]> desc tbl_eben
+    -> desc table db_eben
+    -> desc table db_eben
+    -> desc tbl eben
+    -> desc tbl_eben
+    -> show tables
+    -> desc tbl_eben;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'desc table db_eben
+desc table db_eben
+desc tbl eben
+desc tbl_eben
+show tabl...' at line 2
+MariaDB [db_eben]> desc tbl_eben;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id_eben    | varchar(5)   | NO   | PRI | NULL    |       |
+| nama_murid | varchar(10)  | YES  |     | NULL    |       |
+| alamat     | varchar(100) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+3 rows in set (0.007 sec)
+
+MariaDB [db_eben]>  INSERT into tbl_eben (id_eben, nama_murid, alamat) values ("1","eben hezer wangsa djaja",sudimampir, kalijati subang, jawabarat")
+    ">
+    ">  INSERT into tbl_eben (id_eben, nama_murid, alamat) values ("1","eben hezer wangsa djaja",sudimampir, kalijati subang, jawabarat");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'subang, jawabarat")
+
+ INSERT into tbl_eben (id_eben, nama_murid, alamat) valu...' at line 1
+MariaDB [db_eben]>  INSERT into tbl_eben (id_eben, nama_murid, alamat) values ("1","eben hezer wangsa djaja",sudimampir, kalijati subang, jawabarat");
+    ">  INSERT into tbl_eben (id_eben, nama_murid, alamat) values ("1","eben hezer",sudimampir, kalijati subang, jawabarat");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'subang, jawabarat");
+ INSERT into tbl_eben (id_eben, nama_murid, alamat) valu...' at line 1
+MariaDB [db_eben]>  INSERT into tbl_eben (id_eben, nama_murid, alamat) values ("1","eben hezer","sudimampir, kalijati subang, jawabarat");
+Query OK, 1 row affected (0.011 sec)
+
+MariaDB [db_eben]> show tables;
++-------------------+
+| Tables_in_db_eben |
++-------------------+
+| tbl_eben          |
++-------------------+
+1 row in set (0.001 sec)
+
+MariaDB [db_eben]> desc tbl_eben;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id_eben    | varchar(5)   | NO   | PRI | NULL    |       |
+| nama_murid | varchar(10)  | YES  |     | NULL    |       |
+| alamat     | varchar(100) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+3 rows in set (0.005 sec)
+
+MariaDB [db_eben]> select * from tbl_eben;
++---------+------------+----------------------------------------+
+| id_eben | nama_murid | alamat                                 |
++---------+------------+----------------------------------------+
+| 1       | eben hezer | sudimampir, kalijati subang, jawabarat |
++---------+------------+----------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [db_eben]>
